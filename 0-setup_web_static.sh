@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install Nginx
 sudo apt-get update
-sudo apt-get -y nginx
+sudo apt-get -y install nginx
 
 # Create directories
 sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
@@ -10,7 +10,7 @@ sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
 echo "Hello Mike!" | sudo tee /data/web_static/releases/test/index.html
 
 # Create or recreate symbolic link
-sudo ln -sf /data/web_static/release/test /data/web_static/current
+sudo ln -sf /data/web_static/releases/test /data/web_static/current
 
 # Give ownership to the ubuntu user and group recursively
 sudo chown -R ubuntu:ubuntu /data
